@@ -8,9 +8,9 @@ object Sample {
 
     val conf = new SparkConf().setMaster("local").setAppName("DemoOne")
     val sc = new SparkContext(conf)
-    //val lii = (1,2,3)
     val li = sc.parallelize(Seq(1,2,5,3))
     println(li.count())
+    println(li.first())
 
 
 
